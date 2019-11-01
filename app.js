@@ -15,7 +15,7 @@ var sumAnswer = a +b;
 myArray[0] = sumAnswer
 var result = `The sum of ${a} and ${b} is ${sumAnswer}.`;
 myArray[1] = result;
-return myArray[0];
+return myArray;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -39,7 +39,7 @@ var productAnswer = a * b;
 myArray1[0] = productAnswer;
 var result = `The product of ${a} and ${b} is ${productAnswer}.`;
 myArray1[1] = result;
-return myArray1[0];
+return myArray1;
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -62,15 +62,18 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 var myArray2 = [];
 var d = sum(a, b);
-var finSum = sum(c, d);
+var finSum = sum(c, d[0]);        
+console.log('sum: ',finSum);
 var e = multiply(a, b);
-var finProd = multiply(c, e);
-myArray2[0] = finSum;
-myArray2[1] = finProd;
-myArray2[2] = `${a} and ${b} and ${c} sum to ${finSum}.`;
-myArray2[3] = `The product of ${a} and ${b} and ${c} is ${finProd}.`;
+var finProd = multiply(c, e[0]);
+myArray2[0] = finSum[0];
+myArray2[1] = finProd[0];
+myArray2[2] = `${a} and ${b} and ${c} sum to ${finSum[0]}.`;
+myArray2[3] = `The product of ${a} and ${b} and ${c} is ${finProd[0]}.`;
 return myArray2;
 }
+
+
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
