@@ -13,7 +13,7 @@ function sum(a, b) { //eslint-disable-line
 var myArray = [];
 var sumAnswer = a +b;
 myArray[0] = sumAnswer
-var result = `The sum of ${a} and ${b} is ${sumAnswer}.`
+var result = `The sum of ${a} and ${b} is ${sumAnswer}.`;
 myArray[1] = result;
 return myArray;
 }
@@ -29,11 +29,17 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 "The product of 5 and 9 is 45."
 
+
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
-// Write your code here
+// Write your code here.
 function multiply(a, b) { //eslint-disable-line
-
+var myArray = [];
+var productAnswer = a * b;
+myArray[0] = productAnswer;
+var result = `The product of ${5} and ${9} is ${productAnswer}.`;
+myArray[1] = result;
+return myArray;
 }
 
 // Here is the test for multiply(); uncomment it to run it
