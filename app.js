@@ -34,16 +34,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here.
 function multiply(a, b) { //eslint-disable-line
-var myArray = [];
+var myArray1 = [];
 var productAnswer = a * b;
-myArray[0] = productAnswer;
-var result = `The product of ${5} and ${9} is ${productAnswer}.`;
-myArray[1] = result;
-return myArray;
+myArray1[0] = productAnswer;
+var result = `The product of ${a} and ${b} is ${productAnswer}.`;
+myArray1[1] = result;
+return myArray1;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -60,11 +60,23 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+var myArray2 = [];
+var d = sum(a, b);
+var finSum = sum(c, d[0]);        
+console.log('sum: ',finSum);
+var e = multiply(a, b);
+var finProd = multiply(c, e[0]);
+myArray2[0] = finSum[0];
+myArray2[1] = finProd[0];
+myArray2[2] = `${a} and ${b} and ${c} sum to ${finSum[0]}.`;
+myArray2[3] = `The product of ${a} and ${b} and ${c} is ${finProd[0]}.`;
+return myArray2;
 }
 
+
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
