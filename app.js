@@ -10,12 +10,12 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
 // return an array where the first number is the sum, and the second number is a string
-var myArray = [];
+var myArray1 = [];
 var sumAnswer = a +b;
-myArray[0] = sumAnswer
+myArray1[0] = sumAnswer
 var result = `The sum of ${a} and ${b} is ${sumAnswer}.`;
-myArray[1] = result;
-return myArray;
+myArray1[1] = result;
+return myArray1;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -34,12 +34,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here.
 function multiply(a, b) { //eslint-disable-line
-var myArray1 = [];
+var myArray2 = [];
 var productAnswer = a * b;
-myArray1[0] = productAnswer;
+myArray2[0] = productAnswer;
 var result = `The product of ${a} and ${b} is ${productAnswer}.`;
-myArray1[1] = result;
-return myArray1;
+myArray2[1] = result;
+return myArray2;
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -60,17 +60,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-var myArray2 = [];
+var myArray3 = [];
 var d = sum(a, b);
 var finSum = sum(c, d[0]);        
 console.log('sum: ',finSum);
 var e = multiply(a, b);
 var finProd = multiply(c, e[0]);
-myArray2[0] = finSum[0];
-myArray2[1] = finProd[0];
-myArray2[2] = `${a} and ${b} and ${c} sum to ${finSum[0]}.`;
-myArray2[3] = `The product of ${a} and ${b} and ${c} is ${finProd[0]}.`;
-return myArray2;
+myArray3[0] = finSum[0];
+myArray3[1] = finProd[0];
+myArray3[2] = `${a} and ${b} and ${c} sum to ${finSum[0]}.`;
+myArray3[3] = `The product of ${a} and ${b} and ${c} is ${finProd[0]}.`;
+return myArray3;
 }
 
 
@@ -82,24 +82,33 @@ testSumAndMultiply(4,7,5);
 
 /////////////////////////////////////
 /* Problem 4
-Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element 
+is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. 
+You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function 
+and see if the test passes.*/
 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+var myArray4 = [];
+var sumAB = sum(sumArr[0], sumArr[1]);
+var finalSum = sum(sumAB[0], sumArr[2]);
+myArray4[0] = finalSum[0];
+console.log('the result of sumArray is: ' + myArray4[0]);
+myArray4[1] = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${myArray4[0]} is their sum.`;
+return myArray4;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
